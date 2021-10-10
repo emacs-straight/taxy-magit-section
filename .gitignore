@@ -1,0 +1,9 @@
+scratch.*
+org-src-*
+*.elc
+.#*
+/worktrees/
+/Makefile
+/makem.sh
+/.sandbox/
+/scratch/
