@@ -375,7 +375,9 @@ the items' values for each column."
                                  ;; TODO: Do we need to specify the frame?  What if the
                                  ;; buffer isn't currently displayed?
                                  (setf image-p t)
-                                 (floor (car (image-size spec))))
+                                 (if window-system
+                                     (floor (car (image-size spec)))
+                                   0))
                                 (_
                                  ;; No image: just use `string-width'.
                                  (setf image-p nil)
