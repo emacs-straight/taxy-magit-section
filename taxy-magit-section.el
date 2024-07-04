@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Maintainer: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/taxy.el
-;; Version: 0.13
+;; Version: 0.14-pre
 ;; Package-Requires: ((emacs "26.3") (magit-section "3.2.1") (taxy "0.10"))
 ;; Keywords: lisp
 
@@ -380,7 +380,7 @@ the items' values for each column."
                       ;; Text has a display property: check for an image.
                       (pcase (get-text-property pos 'display string)
                         ((and `(image . ,_rest) spec)
-                         ;; An image: try to calcuate the display width.  (See also:
+                         ;; An image: try to calculate the display width.  (See also:
                          ;; `org-string-width'.)
 
                          ;; FIXME: The entire string may not be an image, so the
