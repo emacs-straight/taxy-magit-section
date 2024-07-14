@@ -1,2 +1,0 @@
-;; Generated package description from taxy-magit-section.el  -*- no-byte-compile: t -*-
-(define-package "taxy-magit-section" "0.14pre0.20240703.212805" "View Taxy structs in a Magit Section buffer" '((emacs "26.3") (magit-section "3.2.1") (taxy "0.10")) :commit "cfcfdaf25a379ae90455fc08daec6385fd7372aa" :authors '(("Adam Porter" . "adam@alphapapa.net")) :maintainer '("Adam Porter" . "adam@alphapapa.net") :keywords '("lisp") :url "https://github.com/alphapapa/taxy.el")
