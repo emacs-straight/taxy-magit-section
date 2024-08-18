@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Maintainer: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/taxy.el
-;; Version: 0.14-pre
+;; Version: 0.14
 ;; Package-Requires: ((emacs "26.3") (magit-section "3.2.1") (taxy "0.10"))
 ;; Keywords: lisp
 
@@ -276,8 +276,12 @@ PLIST may be a plist setting the following options:
                                          (format "Columns defined by `%s'."
                                                  definer-name)))
          (column-formatters-variable-name (intern (format "%s-column-formatters" prefix)))
-         (column-formatters-variable-docstring (format "Column formatters defined by `%s'."
-                                                       definer-name)))
+         (column-formatters-variable-docstring
+          ;; For the best chance for this docstring to not exceed 80 characters in width,
+          ;; the macro's name goes on its own line.
+          (format "Column formatters defined by the macro:
+`%s'."
+                  definer-name)))
     `(let ((columns-variable ',columns-variable-name)
            (column-formatters-variable ',column-formatters-variable-name))
        (defcustom ,level-indent-variable-name 2

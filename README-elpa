@@ -30,10 +30,12 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.14-pre
-────────────
+2.1 0.14
+────────
 
-  Nothing new yet.
+  *Fixes*
+  ⁃ Reduce the potential width of macro-expanded docstrings to prevent
+    byte-compiler warnings.
 
 
 2.2 0.13
