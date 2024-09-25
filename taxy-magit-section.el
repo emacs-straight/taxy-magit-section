@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Maintainer: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/taxy.el
-;; Version: 0.14.2
+;; Version: 0.14.3
 ;; Package-Requires: ((emacs "26.3") (magit-section "3.2.1") (taxy "0.10"))
 ;; Keywords: lisp
 
@@ -404,7 +404,9 @@ the items' values for each column."
                                       (or window-system-frame
                                           (setf window-system-frame
                                                 (cl-loop for frame in (frame-list)
-                                                         when (member (framep frame) '(x w32 ns pgtk))
+                                                         when (and (frame-visible-p frame)
+                                                                   (memq (framep frame)
+                                                                         '(x w32 ns pgtk)))
                                                          return frame))
                                           (error "taxy-magit-section-format-items: No graphical frame to calculate image size"))))))
                         (_
